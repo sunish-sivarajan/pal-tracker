@@ -40,8 +40,8 @@ jobs:
             apt-get update
             apt-get install cf-cli
 
-             - run:
-         name: Install jq
+      - run:
+          name: Install jq
           command: |
             apt-get -y install jq
 
@@ -126,3 +126,4 @@ workflows:
       - deployToProd:
           requires:
             - canDeployToProduction
+            #added DB migartion
